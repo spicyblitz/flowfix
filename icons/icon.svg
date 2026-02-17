@@ -1,0 +1,78 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle with Dark Gradient -->
+  <circle cx="64" cy="64" r="64" fill="url(#bgGradient)"/>
+  
+  <!-- Gradient Definitions -->
+  <defs>
+    <!-- Background: Dark with subtle gradient -->
+    <linearGradient id="bgGradient" x1="0" y1="0" x2="128" y2="128" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="50%" stop-color="#16213e"/>
+      <stop offset="100%" stop-color="#0f1429"/>
+    </linearGradient>
+    
+    <!-- Primary Gradient: Teal to Purple -->
+    <linearGradient id="primaryGradient" x1="32" y1="24" x2="96" y2="104" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#5eead4"/>
+      <stop offset="25%" stop-color="#14b8a6"/>
+      <stop offset="75%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+    
+    <!-- Glow Filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Strong Glow for Lightning -->
+    <filter id="strongGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Health/Diagnostic Circle Background -->
+  <circle cx="64" cy="64" r="48" fill="none" stroke="url(#primaryGradient)" stroke-width="2" opacity="0.3" filter="url(#glow)"/>
+  <circle cx="64" cy="64" r="42" fill="none" stroke="url(#primaryGradient)" stroke-width="1.5" opacity="0.2"/>
+  
+  <!-- Heartbeat/Diagnostic Line (EKG style) -->
+  <path d="M 32 64 L 44 64 L 48 54 L 52 74 L 56 64 L 68 64" 
+        stroke="url(#primaryGradient)" 
+        stroke-width="2.5" 
+        fill="none" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"
+        opacity="0.6"
+        filter="url(#glow)"/>
+  
+  <!-- Lightning Bolt (Main Icon) -->
+  <path d="M 70 28 L 54 64 L 66 64 L 58 100 L 86 56 L 70 56 Z" 
+        fill="url(#primaryGradient)" 
+        filter="url(#strongGlow)"
+        stroke="rgba(94, 234, 212, 0.5)"
+        stroke-width="0.5"/>
+  
+  <!-- Accent Dots (Diagnostic Points) -->
+  <circle cx="36" cy="64" r="2" fill="#5eead4" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="68" cy="64" r="2" fill="#8b5cf6" opacity="0.8" filter="url(#glow)"/>
+  
+  <!-- Subtle Plus Symbol (Health/Medical) -->
+  <path d="M 88 36 L 88 42 M 85 39 L 91 39" 
+        stroke="#5eead4" 
+        stroke-width="2" 
+        stroke-linecap="round"
+        opacity="0.4"/>
+  <path d="M 40 88 L 40 94 M 37 91 L 43 91" 
+        stroke="#8b5cf6" 
+        stroke-width="2" 
+        stroke-linecap="round"
+        opacity="0.4"/>
+</svg>

@@ -11,7 +11,8 @@
     "https://zapier.com/*",
     "https://www.make.com/*",
     "https://us1.make.com/*",
-    "https://eu1.make.com/*"
+    "https://eu1.make.com/*",
+    "https://eu2.make.com/*"
   ],
   "action": {
     "default_popup": "popup/index.html",

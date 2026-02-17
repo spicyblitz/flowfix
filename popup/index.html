@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlowFix</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <div class="logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">FlowFix</span>
+      </div>
+      <span class="version">v1.1.0</span>
+    </header>
+
+    <main id="main-content">
+      <!-- Loading state -->
+      <div id="loading" class="state">
+        <div class="spinner"></div>
+        <p>Analyzing your integrations...</p>
+      </div>
+
+      <!-- No platform detected -->
+      <div id="no-platform" class="state hidden">
+        <div class="icon">🔍</div>
+        <h2>Open a Dashboard</h2>
+        <p>Navigate to your Zapier or Make.com dashboard to analyze your integrations.</p>
+        <div class="supported">
+          <span class="badge">zapier.com</span>
+          <span class="badge">make.com</span>
+        </div>
+      </div>
+
+      <!-- Health score display -->
+      <div id="health-display" class="state hidden">
+        <div class="score-ring" id="score-ring">
+          <div class="score-value" id="score-value">--</div>
+          <div class="score-label">Health Score</div>
+        </div>
+
+        <div class="platform-badge" id="platform-badge">
+          <span id="platform-name">Platform</span>
+        </div>
+
+        <div class="metrics-grid" id="metrics-grid">
+          <!-- Populated by JS -->
+        </div>
+
+        <div class="recommendations" id="recommendations">
+          <h3>Recommendations</h3>
+          <ul id="recommendations-list">
+            <!-- Populated by JS -->
+          </ul>
+        </div>
+
+        <button class="cta-button" id="analyze-btn">
+          Re-analyze Dashboard
+        </button>
+      </div>
+    </main>
+
+    <footer>
+      <a href="https://github.com/flowfix" target="_blank">GitHub</a>
+      <span class="divider">•</span>
+      <a href="../privacy-policy.html" target="_blank">Privacy</a>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

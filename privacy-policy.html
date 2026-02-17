@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlowFix - Privacy Policy</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #fafafa;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #1a73e8;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #1a73e8;
+      padding-bottom: 10px;
+    }
+
+    h2 {
+      color: #1a73e8;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 1.3em;
+    }
+
+    p {
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    ul, ol {
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+
+    li {
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+    code {
+      background: #f5f5f5;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: 'Monaco', 'Courier New', monospace;
+      color: #d63384;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .last-updated {
+      text-align: right;
+      color: #999;
+      font-size: 0.9em;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+    }
+
+    .highlight {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🔒 FlowFix Privacy Policy</h1>
+
+    <p><strong>FlowFix</strong> is a Chrome extension that helps you diagnose and optimize your Zapier and Make.com workflows. This privacy policy explains how FlowFix handles your data.</p>
+
+    <!-- Core Privacy Statement -->
+    <div class="section">
+      <h2>Our Core Promise</h2>
+      <div class="highlight">
+        <strong>FlowFix respects your privacy.</strong>
+        <p style="margin-top: 10px; margin-bottom: 0;">We do not collect, store, or share your personal data. All analysis happens locally on your device.</p>
+      </div>
+    </div>
+
+    <!-- What FlowFix Does -->
+    <div class="section">
+      <h2>What FlowFix Does</h2>
+      <p>FlowFix analyzes the DOM (visual structure) of your Zapier and Make.com dashboards to extract workflow metrics:</p>
+      <ul>
+        <li><strong>Zapier:</strong> Task usage, task limits, zap counts, error indicators</li>
+        <li><strong>Make.com:</strong> Operation usage, operation limits, scenario counts, status indicators</li>
+      </ul>
+      <p>These metrics are displayed in a badge on your dashboard and a popup for quick reference.</p>
+    </div>
+
+    <!-- What We DON'T Do -->
+    <div class="section">
+      <h2>What We Do NOT Do</h2>
+      <ul>
+        <li>❌ Send your data to external servers</li>
+        <li>❌ Collect personal information beyond what's visible in the DOM</li>
+        <li>❌ Use analytics or tracking services</li>
+        <li>❌ Share your workflow names, email, or account details</li>
+        <li>❌ Make network requests (except to Zapier/Make sites you're already viewing)</li>
+        <li>❌ Store session tokens or authentication credentials</li>
+      </ul>
+    </div>
+
+    <!-- Local Storage -->
+    <div class="section">
+      <h2>Local Storage</h2>
+      <p>FlowFix stores the following information <strong>only on your device</strong> using Chrome's <code>chrome.storage.local</code>:</p>
+      <ul>
+        <li>Extracted metrics (task/operation counts, health scores)</li>
+        <li>Timestamp of when metrics were last collected</li>
+        <li>Current page URL (without query parameters or sensitive data)</li>
+        <li>Team name and plan name (as visible on the dashboard)</li>
+      </ul>
+      <p><strong>This data is never transmitted over the network.</strong> It remains in your browser's local storage until you clear it manually.</p>
+    </div>
+
+    <!-- Permissions -->
+    <div class="section">
+      <h2>Permissions Explained</h2>
+      <p>FlowFix requests only the minimum permissions needed to function:</p>
+      <ul>
+        <li>
+          <strong><code>activeTab</code></strong><br>
+          Allows FlowFix to analyze the current page's DOM when you click the extension icon or when it detects a Zapier/Make dashboard.
+        </li>
+        <li>
+          <strong><code>storage</code></strong><br>
+          Allows FlowFix to save extracted metrics locally for display in the popup.
+        </li>
+      </ul>
+      <p>We explicitly do NOT request:</p>
+      <ul>
+        <li><code>webRequest</code> — We don't intercept or analyze your network traffic</li>
+        <li><code>tabs</code> — We only access the active tab, not your browsing history</li>
+        <li><code>&lt;all_urls&gt;</code> — We only work on zapier.com and make.com</li>
+      </ul>
+    </div>
+
+    <!-- Host Permissions -->
+    <div class="section">
+      <h2>Host Permissions</h2>
+      <p>FlowFix operates only on these websites:</p>
+      <ul>
+        <li><code>zapier.com/*</code></li>
+        <li><code>www.make.com/*</code></li>
+        <li><code>us1.make.com/*</code></li>
+        <li><code>eu1.make.com/*</code></li>
+        <li><code>eu2.make.com/*</code></li>
+      </ul>
+      <p>On these sites, FlowFix can only read the page DOM—it cannot modify your workflows or settings.</p>
+    </div>
+
+    <!-- Security -->
+    <div class="section">
+      <h2>Security</h2>
+      <ul>
+        <li>FlowFix uses Shadow DOM to prevent page CSS/JavaScript from interfering with the extension</li>
+        <li>All DOM element creation uses safe APIs (no <code>innerHTML</code>)</li>
+        <li>No third-party libraries are loaded from external CDNs</li>
+        <li>No external API calls are made except to Zapier/Make (which you're already connected to)</li>
+      </ul>
+    </div>
+
+    <!-- Data Deletion -->
+    <div class="section">
+      <h2>Deleting Your Data</h2>
+      <p>You have complete control over data stored by FlowFix:</p>
+      <ul>
+        <li><strong>Clear extension storage:</strong> Go to <code>chrome://apps</code>, find FlowFix, right-click → Delete → Remove</li>
+        <li><strong>Keep extension, clear data:</strong> The "Delete Extension Data" option in Chrome's extension page</li>
+        <li><strong>Manual browser storage:</strong> Chrome DevTools → Application → Storage → Local Storage</li>
+      </ul>
+    </div>
+
+    <!-- Changes to Policy -->
+    <div class="section">
+      <h2>Changes to This Policy</h2>
+      <p>If we update this privacy policy, we'll notify you by updating the "Last Updated" date. Significant changes will be announced when you update to a new version of FlowFix.</p>
+    </div>
+
+    <!-- Contact -->
+    <div class="section">
+      <h2>Questions?</h2>
+      <p>If you have questions about FlowFix's privacy practices, please contact the developer through the Chrome Web Store extension page.</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="last-updated">
+      <strong>Last Updated:</strong> February 16, 2026<br>
+      <strong>FlowFix Version:</strong> 1.1.0
+    </div>
+  </div>
+</body>
+</html>
