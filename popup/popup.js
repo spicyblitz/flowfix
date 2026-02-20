@@ -166,14 +166,22 @@ function displayMetrics(metrics) {
 
 /**
  * Add a metric card to the grid
+ * Uses DOM methods exclusively — no innerHTML — to prevent any XSS risk.
  */
 function addMetric(container, label, value, statusClass = '') {
   const card = document.createElement('div');
   card.className = 'metric-card';
-  card.innerHTML = `
-    <div class="metric-label">${label}</div>
-    <div class="metric-value ${statusClass}">${value}</div>
-  `;
+
+  const labelEl = document.createElement('div');
+  labelEl.className = 'metric-label';
+  labelEl.textContent = label;
+
+  const valueEl = document.createElement('div');
+  valueEl.className = statusClass ? `metric-value ${statusClass}` : 'metric-value';
+  valueEl.textContent = value;
+
+  card.appendChild(labelEl);
+  card.appendChild(valueEl);
   container.appendChild(card);
 }
 
